@@ -1,0 +1,45 @@
+/*visuel général*/
+
+body /*pour test à retirer à l'intégration*/
+{
+    background-color:beige;
+}
+
+ul {
+    list-style-type: none;
+  }
+
+/*visuel par section*/
+
+header
+{
+    background-color: coral;
+}
+
+#recherche
+{
+    background-color: cornflowerblue;
+}
+#filtres
+{
+    background-color: darkgoldenrod;
+}
+
+#hebergement-marseille
+{
+    background-color:#F2F2F2;
+}
+
+#hebergement-populaire
+{
+    background-color:#F2F2F2;
+}
+#activite-marseille
+{
+    background-color: darkgreen;
+}
+
+footer
+{
+    background-color: darksalmon;
+}
