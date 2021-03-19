@@ -52,13 +52,34 @@ strong
     font-size: 1.1em;
 }
 /*visuel en-tête*/
+@media all and (max-width: 1000px)
+{
+.header-logo {order: 1;}
+.c {order: 2;}
+.a {order: 3;}
+.b {order: 4;}
+}
 .header
 {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     flex: 0 100%;
     background-color: coral;
+}
+.header p
+{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1 0 0;
+    background-color: rgb(110, 243, 77);
+    padding: 5px;
+    
+}
+.header-logo
+{
+    display: flex;
+    flex: 4 0 0;
+    background-color: rgb(180, 218, 76);
 }
 .recherche
 {
@@ -140,6 +161,7 @@ strong
     border-radius: 20px 0px 0px 20px;
     margin-right: 10px;
 }
+
 /*visuel activité*/
 .box-activite--3000
 {
