@@ -4,19 +4,34 @@
     font-family: 'raleway';
     src: url('police-raleway/Raleway-VariableFont_wght.ttf') format('truetype');
 }
-@media all and (max-width: 400px)
+.body
 {
-    #box-hebergement--1100 { flex: 1 0 0; }
-    #box-hebergement--1200 { flex: 1 0 0; }
-}
-body
-{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     font-family: 'raleway';
     font-size: 1em;
     background-color:rgb(0, 0, 0);/*pour test à retirer à l'intégration*/
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+}
+/*visuel général*/
+@media all and (max-width: 1000px)
+{
+    .body {flex-direction: column;}
+    .header { order: 1;}
+    .recherche {order: 2;}
+    .filtres {order: 3;}
+    .box-populaire--2000 
+    {
+        order: 4;
+        flex: 0 100%;
+    }
+    .box-hebergement--1000 
+    {
+        order: 5;
+        flex: 0 100%;
+    }
+    .box-activite--3000 {order: 6;}
+    .footer {order: 7;}
 }
 h1
 {
@@ -37,65 +52,58 @@ strong
     font-size: 1.1em;
 }
 /*visuel en-tête*/
-header
+.header
 {
-    background-color: coral;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    flex: 0 100%;
+    background-color: coral;
 }
-#recherche
+.recherche
 {
-    background-color: cornflowerblue;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    flex: 0 100%;
+    background-color: cornflowerblue;
 }
-#filtres
+.filtres
 {
-    background-color: darkgoldenrod;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    flex: 0 100%;
+    background-color: darkgoldenrod;
 }
 
 /*visuel hébergement*/
-#box-hebergement--1000
+.box-hebergement--1000
 {
-    background-color: rgb(185, 185, 27);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap-reverse;
-}
-
-
-.box-hebergement--1100
-{
-    background-color:#F2F2F2;
-    border-radius: 20px 20px 20px 20px;
     display: flex;
     flex-direction:column;
     flex-wrap: wrap;
-    flex: 3;
+    flex: 3 0 0;
+    background-color:#9c1b1b;
+    border-radius: 20px 20px 20px 20px;
     margin: 10px;
     padding-left: 10px;
     padding-right: 10px;
 }
 .box-hebergement--1110
 {
-    background-color:#F2F2F2;
     display: flex;
     flex-direction:row;
     flex-wrap: wrap;
+    background-color:#F2F2F2;
     border-radius: 20px 20px 20px 20px;
     justify-content:center;
-    
 }
 .box-hebergement--1111
 {
     display: flex;
     flex-direction:column;
     flex-wrap: wrap;
-    min-width: 300px;
     background-color: white;
     border-style:outset;
     border-radius: 20px 20px 20px 20px;
@@ -106,45 +114,63 @@ header
 {
     border-radius: 20px 20px 0px 0px;
 }
-
-#box-hebergement--1200
+.box-populaire--2000
 {
+    display: flex;
+    flex-flow: column wrap;
+    flex: 1 0 0;
     background-color:#F2F2F2;
     border-radius: 20px 20px 20px 20px;
+    margin: 10px;
+    padding: 10px;
+    align-content: center;
+}
+.box-populaire--2110
+{   
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-style:outset;
+    border-radius: 20px 20px 20px 20px;
+    padding: 10px;
+    margin-top: 10px;
+}
+.box-populaire--2110 img
+{
+    border-radius: 20px 0px 0px 20px;
+    margin-right: 10px;
+}
+/*visuel activité*/
+.box-activite--3000
+{
+    display: flex;
+    flex-flow: column wrap;
+    flex: 0 100%;
+    background-color: darkgreen;
+    padding: 10px;
+}
+.box-activite--3100
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(14, 37, 112);
+}
+.box-activite--3110
+{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 350px;
-    margin: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    align-content: center;
-}
-.box-hebergement--1210
-{
-    background-color: rgb(223, 78, 78);
-    border-radius: 20px 20px 20px 20px;
-    display: flex;
-    flex-direction: row;
-    padding: 10px;
-    margin-top: 10px
-}
-.box-hebergement--1210 img
-{
-    border-radius: 20px 0px 0px 20px;
-}
-/*visuel activité*/
-#activite-marseille
-{
-    background-color: darkgreen;
-    display: flex;
+    background-color: rgb(128, 150, 30);
 }
 /*visuel pied page*/
 footer
 {
-    background-color: darksalmon;
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
+    flex: 0 100%;
+    background-color:#F2F2F2;
 }
 footer ul 
 {
