@@ -1,37 +1,17 @@
-/*visuel général*/
+/*appel police*/
 @font-face 
 {
     font-family: 'raleway';
     src: url('police-raleway/Raleway-VariableFont_wght.ttf') format('truetype');
 }
+/*visuel général*/
+
 .body
 {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     font-family: 'raleway';
+    color: rgb(161, 56, 56);
     font-size: 1em;
     background-color:rgb(0, 0, 0);/*pour test à retirer à l'intégration*/
-}
-/*visuel général*/
-@media all and (max-width: 1000px)
-{
-    .body {flex-direction: column;}
-    .header { order: 1;}
-    .recherche {order: 2;}
-    .filtres {order: 3;}
-    .box-populaire--2000 
-    {
-        order: 4;
-        flex: 0 100%;
-    }
-    .box-hebergement--1000 
-    {
-        order: 5;
-        flex: 0 100%;
-    }
-    .box-activite--3000 {order: 6;}
-    .footer {order: 7;}
 }
 h1
 {
@@ -52,28 +32,21 @@ strong
     font-size: 1.1em;
 }
 /*visuel en-tête*/
-@media all and (max-width: 1000px)
-{
-.header-logo {order: 1;}
-.c {order: 2;}
-.a {order: 3;}
-.b {order: 4;}
-}
 .header
 {
     display: flex;
     flex-flow: row wrap;
-    flex: 0 100%;
     background-color: coral;
 }
-.header p
+.header a
 {
     display: flex;
     flex-flow: row wrap;
     flex: 1 0 0;
     background-color: rgb(110, 243, 77);
+    align-content: center;
+    justify-content: center;
     padding: 5px;
-    
 }
 .header-logo
 {
@@ -81,24 +54,67 @@ strong
     flex: 4 0 0;
     background-color: rgb(180, 218, 76);
 }
+/*visuel recherche*/
 .recherche
 {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    flex: 0 100%;
     background-color: cornflowerblue;
 }
+.recherche form
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: violet;
+}
+.recherche svg
+{
+    background-color:#F2F2F2;
+    border-radius: 50px;
+}
+/*visuel filtre*/
 .filtres
 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    flex: 0 100%;
-    background-color: darkgoldenrod;
+    background-color: white; /*pour test à retirer à l'intégration*/
+    align-items: center;
 }
-
+.filtres div
+{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 50px;
+    border: 3px #d9d9d9 solid;
+    height: 50px;
+    margin: 10px;
+    align-items: center;
+}
+.filtres div:hover
+{
+    background-color: #DEEBFF;
+}
+.filtres svg 
+{
+    fill: #0065FC;
+    background-color:#DEEBFF;
+    border-radius: 50px;
+}
+.filtres p
+{
+    margin-left: 10px;
+    margin-right: 10px;
+}
 /*visuel hébergement*/
+.box-heber--popul
+{
+    display: flex;
+    flex-direction: row;
+}
 .box-hebergement--1000
 {
     display: flex;
@@ -119,6 +135,7 @@ strong
     background-color:#F2F2F2;
     border-radius: 20px 20px 20px 20px;
     justify-content:center;
+    align-content: center;
 }
 .box-hebergement--1111
 {
@@ -130,9 +147,11 @@ strong
     border-radius: 20px 20px 20px 20px;
     margin: 10px;
     padding: 10px;
+    flex: 1 33% 0;
 }
 .box-hebergement--1111 img
 {
+    display: flex;
     border-radius: 20px 20px 0px 0px;
 }
 .box-populaire--2000
@@ -161,13 +180,11 @@ strong
     border-radius: 20px 0px 0px 20px;
     margin-right: 10px;
 }
-
 /*visuel activité*/
 .box-activite--3000
 {
     display: flex;
     flex-flow: column wrap;
-    flex: 0 100%;
     background-color: darkgreen;
     padding: 10px;
 }
@@ -197,4 +214,38 @@ footer
 footer ul 
 {
     list-style-type: none;
+}
+/*visuel smartphone
+    .header { order: 1;}
+    .recherche {order: 2;}
+    .filtres {order: 3;}
+    .box-activite--3000 {order: 6;}
+    .footer {order: 7;}
+
+*/
+@media all and (max-device-width: 480px)
+{
+    .body {font-size: 1.8em;}
+    h1 {font-size: 2em;}
+    h2 {font-size: 2.1em;}
+    strong {font-size: 1.6em;}
+
+    .box-heber--popul{flex-direction: column;}
+    .box-populaire--2000 
+    {
+        order: 1;
+        flex: 0 100%;
+    }
+    .box-hebergement--1000 
+    {
+        flex-direction: column;
+        order: 2;
+        flex: 0 100%;
+    }
+    .box-hebergement--1110 {flex-direction: column; }
+
+    .header-logo {order: 1;}
+    .lien-inscri{order: 2;}
+    .lien-heberg {order: 3;}
+    .lien-acti {order: 4;}
 }
