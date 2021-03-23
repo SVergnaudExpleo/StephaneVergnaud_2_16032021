@@ -5,7 +5,6 @@
     src: url('police-raleway/Raleway-VariableFont_wght.ttf') format('truetype');
 }
 /*visuel général*/
-
 .body
 {
     font-family: 'raleway';
@@ -57,22 +56,26 @@ strong
 /*visuel recherche*/
 .recherche
 {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    padding: 10px;
     background-color: cornflowerblue;
 }
 .recherche form
 {
     display: flex;
     flex-direction: row;
-    align-items: center;
     background-color: violet;
 }
 .recherche svg
 {
     background-color:#F2F2F2;
     border-radius: 50px;
+}
+input[type=search] 
+{
+    border: 1px dotted #999;
+    border-radius: 0;
+    height: 50px;
+    -webkit-appearance: none;
 }
 /*visuel filtre*/
 .filtres
@@ -122,34 +125,36 @@ strong
     flex-wrap: wrap;
     flex: 3 0 0;
     background-color:#9c1b1b;
+    justify-content: center;
     border-radius: 20px 20px 20px 20px;
     margin: 10px;
     padding-left: 10px;
     padding-right: 10px;
 }
-.box-hebergement--1110
+.box-hebergement--1100
 {
     display: flex;
     flex-direction:row;
     flex-wrap: wrap;
     background-color:#F2F2F2;
+    max-width: 1300px;
     border-radius: 20px 20px 20px 20px;
     justify-content:center;
-    align-content: center;
 }
-.box-hebergement--1111
+.box-hebergement--1110
 {
     display: flex;
     flex-direction:column;
     flex-wrap: wrap;
     background-color: white;
+    width: 350px;
     border-style:outset;
     border-radius: 20px 20px 20px 20px;
     margin: 10px;
     padding: 10px;
     flex: 1 33% 0;
 }
-.box-hebergement--1111 img
+.box-hebergement--1110 img
 {
     display: flex;
     border-radius: 20px 20px 0px 0px;
