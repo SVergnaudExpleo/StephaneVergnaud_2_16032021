@@ -4,30 +4,41 @@
         <meta charset="utf-8" />
         <title>Réservia - pour vos loisirs faites nous confiance</title>
         <link rel="stylesheet" href="indexstyle.css"/>
+        <script src="https://kit.fontawesome.com/34f3a0db38.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     </head>
 
-    <body class="body">
-        <header class="header">
-            <div class="header-logo"><img src="logos-icones/Reservia.svg" alt="logo reservia"></div>
+    <body>
+        <header>
+            <div class="header-logo"><img src="logo/Reservia.svg" alt="logo reservia"></div>
             <a class="lien-heberg" href="#box-heber--popul">Hébergement</a>
             <a class="lien-acti" href="#activite">Activités</a>
-            <a class="lien-inscri" href="">S'inscrire</a>
+            <a class="lien-inscri" class="lien-inscri" href="">S'inscrire</a>
         </header>
-
-        <section class="recherche">
-            <div>
+        <section class="text-accueil">
                 <h1>Trouver votre hébergement pour vos vacances de rêve</h1>
                 <p>En plein centre ville ou en pleine nature</p>
-            </div>
-            <form method="post" action="traitement.php">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="-308 -256 1000 1000"><!--384 512-->
-                    <path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"/>
-                    </svg>
-                    <input type="search" name="recherche"/>
-                    <input type="submit" value="Rechercher"/>
+        </section>
+        <section class="recherche">
+            <i class="fas fa-map-marker-alt"></i>
+            <form method="post" action="">
+                <input type="search" name="recherche"/>
+                <input type="submit" value="Rechercher"/>
             </form>
         </section>
 
+
+        <section class="text-nblogement">
+            <i class="fas fa-info-circle"></i>
+            <p>Plus de 500 logements disponibles dans cette ville</p>
+        </section>
+
+
+
+
+
+    
         <section class="filtres">
             <p><strong>Filtres</strong></p>
             <div>
@@ -57,6 +68,22 @@
                 <p><strong>Animaux autorisés</strong></p>
             </div>
         </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <!--Début Contenu de la page-->
         <section class="box-heber--popul">
