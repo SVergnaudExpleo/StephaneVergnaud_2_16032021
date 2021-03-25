@@ -26,6 +26,7 @@ strong
 {
     display: grid;
     grid-template-columns: 70% 10% 10% 10%;
+    grid-template-rows: 50px;
     align-items: center;
 }
 .header-logo
@@ -77,7 +78,7 @@ header a:hover
 }
 @media all and (max-device-width: 480px)
 {
-    header
+    .header-nav
     {
         display: grid;
         grid-template-columns: 50% 50%;
@@ -86,7 +87,7 @@ header a:hover
     .header-logo
     {
         grid-column: 1;
-        grid-row:1 / 2;
+        grid-row: 1 / 2;
     }
     .lien-heberg
     {   
@@ -124,6 +125,7 @@ header a:hover
 .text-accueil p
 {
     margin: 0 0 10px 10px;
+    width: 100%;
 }
 
 .bar-recherche
@@ -171,10 +173,6 @@ input[type=button]
     color: white;
     background-color:#0065FC;
 }
-.text-qtlogement p
-{
-    margin-left: 10px;
-}
 
 .bar-filtres
 {
@@ -190,7 +188,7 @@ input[type=button]
     flex-direction: row;
     border-radius: 50px;
     border: 2px #F2F2F2 solid;
-    height: 50px;
+    
     align-items: center;
     margin-left: 20px;
 }
@@ -203,7 +201,7 @@ input[type=button]
     display: flex;
     color:#0065FC;
     background-color:#DEEBFF;
-    height: 100%;
+    
     width: 50px;
     border-radius: 50px 50px 50px 50px;
     font-size:30px;
@@ -223,58 +221,69 @@ input[type=button]
     border-radius: 20px 20px 20px 20px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     margin: 10px;
-    padding: 5px;
+    
 }
 .carte-cliquable
 {
     text-decoration: none;
-    color:unset;
+    color: unset;
+    height: 100%;
+    width: 100%;
 }
 .carte-verticale
 {
     display: flex;
     flex-direction: column;
+    height: 100%;
+    width: 100%;
 }
 .carte-horizontale
 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    height: 100%;
+    width: 100%;
 }
 .texte-carte-v
 {
- margin: 10px;;
+    margin: 10px;;
 }
-
 .texte-carte-h
 {
     margin: auto auto auto 10px;
 }
 
-
-
-
 /*visuel des images*/
 .img-hebergement
 {
-    border-radius: 10px 10px 0 0;
+    border-radius: 20px 20px 0 0;
     width: 236px;
     height: 114px;
+    padding: 5px;
     object-fit: cover;
 }
 .img-populaire
 {
-    border-radius: 10px 0 0 10px;
+    border-radius: 20px 0 0 20px;
     width: 127px;
     height: 135px;
+    padding: 5px;
     object-fit: cover;
 }
 .img-activite
 {
-    border-radius: 10px 10px 0 0;
-    width: 303px;
-    height: 135px;
+    border-radius: 20px 20px 0 0;
     object-fit: cover;
+}
+@media all and (max-device-width: 480px)
+{
+  .img-hebergement
+{  
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+}
 }
 
 /*visuel hébergement*/
@@ -282,6 +291,7 @@ input[type=button]
 {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 .zone-hebergement
 {
@@ -299,7 +309,6 @@ input[type=button]
     border-radius: 20px 20px 20px 20px;
     margin: 10px;
     padding: 10px;
-    height: 100%;
 }
 .classeur-hebergement
 {
@@ -318,26 +327,81 @@ input[type=button]
     height: 100%;
 }
 
-
-/*visuel activité grid*/
-#box-activite
+@media all and (max-device-width: 480px)
 {
-    margin: 50px;
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20%;
-    grid-template-rows: 50% 50%;
+    #box-hebergement
+    {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .zone-hebergement
+    {
+        width: 100%;
+    }
+    .zone-populaire
+    {
+        width:100%;
+    }
+    .classeur-hebergement
+    {
+        flex-direction: column;
 
+    }
 }
 
 
-
-
+/*visuel activité grid*/
+.classeur-activite
+{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows:220px 220px;
+    justify-items: stretch;
+    align-items: stretch;
+}
+.carte-activite--1
+{
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+.carte-activite--2
+{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+.carte-activite--3
+{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+.carte-activite--4
+{
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+}
+.carte-activite--5
+{
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+}
+.carte-activite--6
+{
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+}
+@media all and (max-device-width: 480px)
+{
+    .classeur-activite
+    {
+        display: flex;
+        flex-direction: column;
+    }
+}
 /*visuel pied page*/
 footer
 {
     display: flex;
     flex-flow: row wrap;
-    flex: 0 100%;
     background-color:#F2F2F2;
 }
 footer ul 
@@ -348,10 +412,7 @@ footer ul
 
 
 /*visuel tablette*/
-@media all and (max-device-width: 1024px)
-{
 
-}
 /*visuel smartphone*/
 @media all and (max-device-width: 480px)
 {
