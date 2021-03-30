@@ -1,3 +1,5 @@
+/*page de traitement du rendu par défaut*/
+
 /*visuel général*/
 body
 {
@@ -6,11 +8,13 @@ body
 h1
 {
     font: bold;
+    font-size: 1.5em;
     margin: 10px;
 }
 h2
 {
     font: bold;
+    font-size: 1.1em;
     margin: 8px 0 8px 0;
 }
 strong
@@ -164,9 +168,14 @@ input[type=button]
 .text-filtre
 {
     font-weight: bold;
+    font-size: 1em;
     margin: 20px;
 }
-
+.titre-filtre
+{
+    font-weight: bold;
+    font-size: 1.1em;
+}
 /*visuel des cartes*/
 .carte
 {
@@ -178,29 +187,12 @@ input[type=button]
     margin: 10px 10px 10px 10px;
     align-items: flex-start;
 }
-.texte-carte-v
-{
-    width: 100%;
-    margin: 10px 5px 10px 20px;
-}
-.texte-carte-v p
-{
-    margin: 0 0 0 0;
-}
-.texte-carte-h
-{
-    width: 50%;
-    margin: 10px 0 10px 10px;
-}
-.texte-carte-h p
-{
-    margin: 0 0 50px 0;
-}
 
 /*visuel étoile*/
 .etoile
 {
     color: #0065FC;
+    width: 100%;
 }
 .etoile-4 i:nth-child(5)
 {
@@ -275,6 +267,35 @@ input[type=button]
 {
     display: flex;
     flex-flow: column wrap;
+}
+.texte-hebergement
+{
+    width: 100%;
+    margin: 10px 5px 10px 20px;
+}
+.texte-hebergement p
+{
+    margin: 0 0 10px 0;
+}
+.texte-populaire
+{
+    display: grid;
+    grid-template-rows:50% 50%;
+    width: 50%;
+    height: 120px;
+    margin: 10px 0 10px 10px;
+}
+.texte-populaire p
+{
+    margin: 0;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.texte-populaire .etoile
+{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    align-self: flex-end;
 }
 
 /*visuel activité*/
@@ -384,122 +405,3 @@ footer ul
 }
 
 
-/*visuel smartphone*/
-@media all and (max-device-width: 480px)
-{
-body
-{
-    font-size: 2em;
-}
-
-    .header-nav
-    {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 40px 40px;
-    }
-    .header-logo
-    {
-        grid-column: 1;
-        grid-row: 1 / 2;
-    }
-    .lien-heberg
-    {   
-        grid-column:1;
-        grid-row:2 / 3;
-        width: 100%;
-        text-align: center;
-        border-bottom: 2px solid #F2F2F2;
-    }
-    .lien-heberg:hover
-    {
-        border-top: none;
-        border-bottom: 2px solid #0065FC;
-    }
-    .lien-acti
-    {
-        grid-column: 2;
-        grid-row:2 / 3;
-        text-align: center;
-        width: 100%;
-        border-bottom: 2px solid #F2F2F2;
-    }
-    .lien-acti:hover
-    {
-        border-top: none;
-        border-bottom: 2px solid #0065FC;
-    }
-    .lien-inscri
-    {
-        grid-column: 2;
-        grid-row:1 / 2;
-    }
-
-    #box-hebergement
-    {
-        flex-direction: column-reverse;
-        align-items: center;
-    }
-    .zone-hebergement
-    {
-        width:90%;
-    }
-    .zone-populaire
-    {
-        width:90%;
-    }
-    .classeur-hebergement
-    {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #box-activite
-    {
-        width: 90%;
-        justify-items: flex-end;
-    }
-    .classeur-activite
-    {
-
-        justify-content: center;
-    }
-
-    .img-hebergement
-    {  
-        object-fit: cover;
-        height: 300px;
-        width: 100%;
-    }
-.img-populaire
-{
-    height: 300px;
-}
-
-    .classeur-activite .carte:nth-child(1) .img-activite
-    {
-        height: 300px;
-    }
-    .classeur-activite .carte:nth-child(2) .img-activite
-    {
-        height: 300px;
-    }
-    .classeur-activite .carte:nth-child(3) .img-activite
-    {
-        height: 300px;
-    }
-    .classeur-activite .carte:nth-child(4) .img-activite
-    {
-        height: 300px;
-    }
-    .classeur-activite .carte:nth-child(5) .img-activite
-    {
-        height: 300px;
-    }
-    .classeur-activite .carte:nth-child(6) .img-activite
-    {
-        height: 300px;
-    }
-
-    footer{flex-direction: column;}
-}

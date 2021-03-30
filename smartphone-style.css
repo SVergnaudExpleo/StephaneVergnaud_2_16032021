@@ -1,0 +1,133 @@
+/*page de traitement du rendu smartphone*/
+body
+{
+    
+}
+
+/*en tête*/
+.header-nav
+{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 40px 40px;
+}
+.header-logo
+{
+    grid-column: 1;
+    grid-row: 1 / 2;
+}
+.lien-heberg
+{   
+    grid-column:1;
+    grid-row:2 / 3;
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid #F2F2F2;
+}
+.lien-heberg:hover
+{
+    border-top: none;
+    border-bottom: 2px solid #0065FC;
+}
+.lien-acti
+{
+    grid-column: 2;
+    grid-row:2 / 3;
+    text-align: center;
+    width: 100%;
+    border-bottom: 2px solid #F2F2F2;
+}
+.lien-acti:hover
+{
+    border-top: none;
+    border-bottom: 2px solid #0065FC;
+}
+.lien-inscri
+{
+    grid-column: 2;
+    grid-row:1 / 2;
+}
+
+
+/*visuel hébergement*/
+#box-hebergement
+{
+    flex-direction: column-reverse;
+    align-items: center;
+}
+.zone-hebergement
+{
+    width:90%;
+}
+.zone-populaire
+{
+    width:90%;
+}
+.classeur-hebergement
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.classeur-populaire
+{
+
+}
+.texte-populaire
+{
+    
+}
+
+
+
+
+
+
+
+/*visuel activité*/
+#box-activite
+{
+    width: 90%;
+    justify-items: flex-end;
+}
+.classeur-activite
+{
+    justify-content: center;
+}
+.img-hebergement
+{  
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+}
+.img-populaire
+{
+    height: 300px;
+}
+.classeur-activite .carte:nth-child(1) .img-activite
+{
+    height: 300px;
+}
+.classeur-activite .carte:nth-child(2) .img-activite
+{
+    height: 300px;
+}
+.classeur-activite .carte:nth-child(3) .img-activite
+{
+    height: 300px;
+}
+.classeur-activite .carte:nth-child(4) .img-activite
+{
+    height: 300px;
+}
+.classeur-activite .carte:nth-child(5) .img-activite
+{
+    height: 300px;
+}
+.classeur-activite .carte:nth-child(6) .img-activite
+{
+    height: 300px;
+}
+
+/*visuel bas de page*/
+footer{flex-direction: column;}
