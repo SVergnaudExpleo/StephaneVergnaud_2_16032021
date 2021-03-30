@@ -7,19 +7,25 @@ body
 }
 h1
 {
-    font: bold;
+    font-weight: bold;
     font-size: 1.5em;
     margin: 10px;
 }
 h2
 {
-    font: bold;
+    font-weight: bold;
+    font-size: 1.4em;
+    margin: 10px;
+}
+h3
+{
+    font-weight: bold;
     font-size: 1.1em;
     margin: 8px 0 8px 0;
 }
 strong
 {
-    font: bold;
+    font-weight: bold;
 }
 a
 {
@@ -171,11 +177,7 @@ input[type=button]
     font-size: 1em;
     margin: 20px;
 }
-.titre-filtre
-{
-    font-weight: bold;
-    font-size: 1.1em;
-}
+
 /*visuel des cartes*/
 .carte
 {
@@ -183,7 +185,8 @@ input[type=button]
     flex-flow: row wrap;
     background-color: white;
     border-radius: 20px 20px 20px 20px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 3px 6px rgba(90.6,90.6,90.6,91.6,0,141.2), 0 3px 6px rgba(0,0,0,0.23);
+    /*box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);*/
     margin: 10px 10px 10px 10px;
     align-items: flex-start;
 }
@@ -224,8 +227,9 @@ input[type=button]
 .img-activite
 {
     border-radius: 20px 20px 0 0;
-    object-fit: cover;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /*visuel hébergement*/
@@ -254,7 +258,7 @@ input[type=button]
 {
     display: grid;
     grid-template-columns: 33% 33% 33%;
-    grid-template-rows:50% 50%;
+    grid-template-rows: 50% 50%;
     justify-content: center;
 }
 .titre-populaire
@@ -301,93 +305,45 @@ input[type=button]
 /*visuel activité*/
 #box-activite
 {
-    display: flex;
-    flex-direction: column;
-    align-items:flex-start;
-    justify-content: center;
     margin: 50px 0 0 0;
 }
 .classeur-activite
 {
-    width: 100%;
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows:50% 50%;
-    align-items: flex-start;
-    justify-content: center;
+    grid-template-columns: auto;
+    grid-template-rows:auto;
+    grid-template-areas: 
+        "grand-1 petit-1 grand-2 petit-3"
+        "grand-1 petit-2 grand-2 petit-4";
 }
 .texte-activite
 {
     width: 100%;
-    margin: 5px 5px 5px 20px;
+    padding: 5px 5px 5px 20px;
 }
 .classeur-activite .carte:nth-child(1)
 {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 3;
-}
-.classeur-activite .carte:nth-child(1) .img-activite
-{
-    height: 400px;
+    grid-area: grand-1;
 }
 .classeur-activite .carte:nth-child(2)
 {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-.classeur-activite .carte:nth-child(2) .img-activite
-{
-    height: 180px;
+    grid-area: petit-1;
 }
 .classeur-activite .carte:nth-child(3)
 {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    align-self: flex-end;
-}
-.classeur-activite .carte:nth-child(3) .img-activite
-{
-    height: 110px;
+    grid-area: petit-2;
 }
 .classeur-activite .carte:nth-child(4)
 {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 3;
-}
-.classeur-activite .carte:nth-child(4) .img-activite
-{
-    height: 400px;
+    grid-area: grand-2;
 }
 .classeur-activite .carte:nth-child(5)
 {
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-.classeur-activite .carte:nth-child(5) .img-activite
-{
-    height: 150px;
+    grid-area: petit-3;
 }
 .classeur-activite .carte:nth-child(6)
 {
-    grid-column-start:4;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    align-self: flex-end;
-}
-.classeur-activite .carte:nth-child(6) .img-activite
-{
-    height: 150px;
+    grid-area: petit-4;
 }
 
 /*visuel pied page*/
