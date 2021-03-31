@@ -201,34 +201,9 @@ input[type=button]
 {
     color: #d9d9d9;
 }
-
 .etoile-3 i:nth-child(5), .etoile-3 i:nth-child(4)
 {
     color: #d9d9d9;
-}
-
-/*visuel des images*/
-.img-hebergement
-{
-    border-radius: 20px 20px 0 0;
-    height: 115px;
-    width: 100%;
-    margin: 5px;
-    object-fit: cover;
-}
-.img-populaire
-{
-    border-radius: 20px 0 0 20px;
-    width: 40%;
-    height: 135px;
-    margin: 5px;
-    object-fit: cover;
-}
-.img-activite
-{
-    border-radius: 20px 20px 0 0;
-    width:100%;
-    object-fit: cover;
 }
 
 /*visuel hébergement*/
@@ -256,7 +231,7 @@ input[type=button]
 .classeur-hebergement
 {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: repeat(3,33%);
     grid-template-rows: 50% 50%;
     justify-content: center;
 }
@@ -300,6 +275,22 @@ input[type=button]
     grid-row: 2/3;
     align-self: flex-end;
 }
+.img-hebergement
+{
+    border-radius: 20px 20px 0 0;
+    height: 115px;
+    width: 100%;
+    margin: 5px;
+    object-fit: cover;
+}
+.img-populaire
+{
+    border-radius: 20px 0 0 20px;
+    width: 40%;
+    height: 135px;
+    margin: 5px;
+    object-fit: cover;
+}
 
 /*visuel activité*/
 #box-activite
@@ -309,17 +300,18 @@ input[type=button]
 .classeur-activite
 {
     display: grid;
-    grid-template-columns: repeat(4,25%);
-    grid-template-rows:repeat(2,200px);
+    grid-template-columns: repeat(4,auto);
+    grid-template-rows:auto;
+    grid-gap: 20px;
     grid-template-areas: 
         "grand-1 petit-1 grand-2 petit-3"
         "grand-1 petit-2 grand-2 petit-4";
 }
 .texte-activite
 {
+    padding: 10px 10px 10px 20px;
+    margin: 0;
     width: 100%;
-    height: 10%;
-    padding: 5px 5px 5px 20px;
 }
 .classeur-activite .carte:nth-child(1)
 {
@@ -328,10 +320,12 @@ input[type=button]
 .classeur-activite .carte:nth-child(2)
 {
     grid-area: petit-1;
+    align-self: flex-start;
 }
 .classeur-activite .carte:nth-child(3)
 {
     grid-area: petit-2;
+    align-self: flex-end;
 }
 .classeur-activite .carte:nth-child(4)
 {
@@ -340,10 +334,43 @@ input[type=button]
 .classeur-activite .carte:nth-child(5)
 {
     grid-area: petit-3;
+    align-self: flex-start;
 }
 .classeur-activite .carte:nth-child(6)
 {
     grid-area: petit-4;
+    align-self: flex-end;
+}
+.img-activite
+{
+    border-radius: 20px 20px 0 0;
+    width:100%;
+    height: 100%;
+    object-fit:cover;
+}
+.classeur-activite .carte:nth-child(1) img
+{
+    max-height: 400px;
+}
+.classeur-activite .carte:nth-child(2) img
+{
+    max-height: 180px;
+}
+.classeur-activite .carte:nth-child(3) img
+{
+    max-height: 110px;
+}
+.classeur-activite .carte:nth-child(4) img
+{
+    max-height: 400px;
+}
+.classeur-activite .carte:nth-child(5) img
+{
+    max-height: 140px;
+}
+.classeur-activite .carte:nth-child(6) img
+{
+    max-height: 152px;
 }
 
 /*visuel pied page*/
