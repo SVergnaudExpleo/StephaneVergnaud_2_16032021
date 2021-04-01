@@ -6,32 +6,28 @@ body
     font-family: 'Raleway', sans-serif;
     margin: 0 0 0 0;
 }
-p
-{
-    font-size: 0.7em;
-}
 h1
 {
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 16px;
     margin: 0 0 15px 0;
 }
 h2
 {
     font-weight: bold;
-    font-size: 1.4em;
+    font-size: 16px;
     margin: 0;
 }
 h3
 {
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 13px;
     margin: 8px 0 8px 0;
 }
 strong
 {
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 12px;
 }
 a
 {
@@ -45,9 +41,9 @@ a
     display: grid;
     grid-template-columns: 70% 10% 10% 10%;
     grid-template-rows: 100px;
-    margin: 0 0 50px 50px;
+    margin: 0 50px 50px 50px;
 }
-.header-logo
+#header-logo
 {
     grid-column: 1;
     padding: 50px 0 0 0;
@@ -60,6 +56,7 @@ header a:hover
 {
     padding: 50px 5px 0 5px;
     margin: 2px;
+    font-size: 12px;
 }
 .lien-heberg
 {   
@@ -94,13 +91,14 @@ header a:hover
     border-top: solid white;
     place-self: start center;
 }
-.text-accueil
+#text-accueil
 {
     margin: 0 0 20px 50px;
+    font-size: 12px;
 }
 
 /*Recherche*/
-.bar-recherche
+#bar-recherche
 {
     display: flex;
     flex-direction: row;
@@ -114,10 +112,10 @@ header a:hover
     background-color:#F2F2F2;
     height: 50px;
     width: 50px;
-    font-size: 20px;
+    font-size: 15px;
     border-radius: 10px 0 0 10px;
 }
-.formulaire-rech
+#formulaire-rech
 {
     display: flex;
     flex-direction: row;
@@ -128,7 +126,7 @@ input[type=text]
 {
     border: 1px solid #F2F2F2;
     width: 235px;
-    font-size: 1em;
+    font-size: 14px;
     font-weight: bold;
 }
 input[type=button]
@@ -138,12 +136,12 @@ input[type=button]
     background-color: #0065FC;
     border-radius: 0 10px 10px 0;
     width: 135px;
-    font-size: 1em;
+    font-size: 14px;
     font-weight: bold;
 }
 
 /*Filtre*/
-.bar-filtres
+#bar-filtres
 {
     display: flex;
     flex-flow: row wrap;
@@ -161,6 +159,7 @@ input[type=button]
     border-top: 2px #F2F2F2 solid;
     border-bottom: 2px #F2F2F2 solid;
     border-right: 2px #F2F2F2 solid;
+    font-size: 13px;
 }
 .bouton-filtre:hover
 {
@@ -178,7 +177,7 @@ input[type=button]
     background-color:#DEEBFF;
     border-radius: 50%;
 }
-.titre-filtre
+#titre-filtre
 {
     margin-right: 33px;
 }
@@ -194,12 +193,13 @@ input[type=button]
     color: white;
     background-color:#0065FC;
 }
-.text-qtlogement
+#text-qtlogement
 {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin: 0 0 40px 50px;
+    font-size: 12px;
 }
 
 /*visuel des cartes*/
@@ -213,6 +213,11 @@ input[type=button]
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     margin: 0px 0px 0px 0px;
     align-items: flex-start;
+}
+h4
+{
+    font-size: 12px;
+    margin: 0 0 13px 0;
 }
 
 /*visuel étoile*/
@@ -241,7 +246,7 @@ font-size: 12px;
     flex-direction: row;
     margin: 0 50px 0 50px;    
 }
-.zone-hebergement
+#zone-hebergement
 {
     width: 70%;
     background-color:#F2F2F2;
@@ -249,7 +254,7 @@ font-size: 12px;
     margin: 0 40px 0 0;
     padding: 45px 40px 50px 40px;
 }
-.zone-populaire
+#zone-populaire
 {
     width: 30%;
     background-color:#F2F2F2;
@@ -291,27 +296,28 @@ font-size: 12px;
 .texte-hebergement p
 {
     margin: 0 0 10px 0;
+    font-size: 10px;
 }
 .texte-populaire
 {
     display: grid;
-    grid-template-rows:50% 50%;
-    width: 50%;
-    height: 120px;
-    margin: 10px 0 10px 10px;
+    grid-template-rows:repeat(2,auto);
+    width: 48%;
+    height: 115px;
+    margin: 5px;
+    padding: 10px 0 10px 0;
 }
 .texte-populaire p
 {
     margin: 0;
-    grid-column: 1/2;
-    grid-row: 1/2;
+    font-size: 0.8em;
 }
 .texte-populaire .etoile
 {
-    grid-column: 1/2;
-    grid-row: 2/3;
+
     align-self: flex-end;
 }
+
 .img-hebergement
 {
     border-radius: 20px 20px 0 0;
@@ -323,7 +329,7 @@ font-size: 12px;
 .img-populaire
 {
     border-radius: 20px 0 0 20px;
-    width: 40%;
+    width: 45%;
     height: 135px;
     margin: 5px;
     object-fit: cover;
