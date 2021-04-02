@@ -64,43 +64,48 @@
     font-size: 12px;
 }
 
-
-
 /*Recherche*/
 #bar-recherche
 {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 50px auto 50px;
     margin: 0 20px 30px 20px;
 }
-
-
 #formulaire-rech
 {
     padding: 0;
     display: flex;
     flex-direction: row;
     height: 50px;
-    border: 1px solid #F2F2F2;
 }
 input[type=text] 
 {
-    width: auto;
+    width: 100%;
 }
-input[name="bouton-texte"]
+.btn-texte
 {
     display: none;
 }
-
-
-
-
-
+.btn-logo
+{
+    display: unset;
+    grid-area: rech-btn;
+    border: none;
+    color: white;
+    background-color: #0065FC;
+    border-radius: 10px 10px 10px 10px;
+    font-size: 14px;
+    padding: 0;
+}
+.fa-search
+{
+    width: 50px;
+}
 
 
 
 /*filtre*/
-.bar-filtres
+#bar-filtres
 {
     display: grid;
     grid-template-columns: repeat(2,50%);
@@ -110,27 +115,34 @@ input[name="bouton-texte"]
         "econom famil"
         "roman ."
         "anim .";    
+    margin: 0 20px 40px 20px;
 }
-.bar-filtres .bouton-filtre:nth-child(1)
+
+
+
+#bar-filtres .bouton-filtre:nth-child(1)
 {
     grid-area: titre;
 }
-.bar-filtres .bouton-filtre:nth-child(2)
+#bar-filtres .bouton-filtre:nth-child(2)
 {
     grid-area: econom;
 }
-.bar-filtres .bouton-filtre:nth-child(3)
+#bar-filtres .bouton-filtre:nth-child(3)
 {
     grid-area: famil;
 }
-.bar-filtres .bouton-filtre:nth-child(4)
+#bar-filtres .bouton-filtre:nth-child(4)
 {
     grid-area: roman;
 }
-.bar-filtres .bouton-filtre:nth-child(5)
+#bar-filtres .bouton-filtre:nth-child(5)
 {
     grid-area: anim;
 }
+
+
+
 
 
 /*visuel des images*/
