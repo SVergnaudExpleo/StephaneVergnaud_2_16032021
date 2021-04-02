@@ -34,7 +34,10 @@ a
     text-decoration: none;
     color: unset;
 }
-
+li
+{
+    font-size: 12px;
+}
 /*visuel nav*/
 .header-nav
 {
@@ -48,13 +51,8 @@ a
     grid-column: 1;
     padding: 50px 0 0 0;
 }
-header a:hover
-{
-    border-top: solid #0065FC;
-}
 .header-nav a
 {
-    padding: 50px 5px 0 5px;
     margin: 2px;
     font-size: 12px;
 }
@@ -63,24 +61,30 @@ header a:hover
     grid-column: 2;
     text-decoration: none;
     color: black;
-    border-top: solid white;
+    border-top: 2px solid white;
     place-self: start center ;
+    padding: 50px 5px 0 5px;
+    margin: 2px;
 }
 .lien-heberg:hover
 {
     color: #0065FC;
+    border-top: 2px solid #0065FC;
 }
 .lien-acti
 {
     grid-column: 3;
     text-decoration: none;
     color: black;
-    border-top: solid white;
+    border-top: 2px solid white;
     place-self: start center;
+    padding: 50px 5px 0 5px;
+    margin: 2px;
 }
 .lien-acti:hover
 {
     color: #0065FC;
+    border-top: 2px solid #0065FC;
 }
 .lien-inscri
 {
@@ -88,9 +92,16 @@ header a:hover
     color: #0065FC;
     grid-column: 4;
     text-decoration: none;
-    border-top: solid white;
+    border-top: 2px solid white;
     place-self: start center;
+    padding: 50px 5px 0 5px;
+    margin: 2px;
 }
+.lien-inscri:hover
+{
+    border-top: 2px solid #0065FC;
+}
+
 #text-accueil
 {
     margin: 0 0 20px 50px;
@@ -104,13 +115,18 @@ header a:hover
     flex-direction: row;
     margin: 0 0 30px 50px;
 }
+#logo-map
+{
+    width: 50px;
+    height: 52px;
+}
 .fa-map-marker-alt
 {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color:#F2F2F2;
-    height: 50px;
+    height: 100%;
     width: 50px;
     font-size: 15px;
     border-radius: 10px 0 0 10px;
@@ -244,7 +260,7 @@ font-size: 12px;
 {
     display: flex;
     flex-direction: row;
-    margin: 0 50px 0 50px;    
+    margin: 0 50px 65px 50px;    
 }
 #zone-hebergement
 {
@@ -338,49 +354,56 @@ font-size: 12px;
 /*visuel activité*/
 #box-activite
 {
-    margin: 50px 0 0 0;
+    margin: 0 50px 60px 50px;
 }
-.classeur-activite
+#classeur-activite
 {
+    height: 438px;
     display: grid;
     grid-template-columns: repeat(4,auto);
-    grid-template-rows:auto;
-    grid-gap: 20px;
+    grid-template-rows:235px auto;
+    grid-gap: 0 45px;
     grid-template-areas: 
         "grand-1 petit-1 grand-2 petit-3"
         "grand-1 petit-2 grand-2 petit-4";
 }
+#titre-activite
+{
+    margin: 0 0 28px 0;
+}
 .texte-activite
 {
-    padding: 10px 10px 10px 20px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 0 0 0 20px;
     margin: 0;
     width: 100%;
-    font-size: 1em;
 }
-.classeur-activite .carte:nth-child(1)
+#classeur-activite .carte:nth-child(1)
 {
     grid-area: grand-1;
 }
-.classeur-activite .carte:nth-child(2)
+#classeur-activite .carte:nth-child(2)
 {
     grid-area: petit-1;
     align-self: flex-start;
 }
-.classeur-activite .carte:nth-child(3)
+#classeur-activite .carte:nth-child(3)
 {
     grid-area: petit-2;
     align-self: flex-end;
 }
-.classeur-activite .carte:nth-child(4)
+#classeur-activite .carte:nth-child(4)
 {
     grid-area: grand-2;
 }
-.classeur-activite .carte:nth-child(5)
+#classeur-activite .carte:nth-child(5)
 {
     grid-area: petit-3;
     align-self: flex-start;
 }
-.classeur-activite .carte:nth-child(6)
+#classeur-activite .carte:nth-child(6)
 {
     grid-area: petit-4;
     align-self: flex-end;
@@ -392,27 +415,27 @@ font-size: 12px;
     height: 100%;
     object-fit:cover;
 }
-.classeur-activite .carte:nth-child(1) img
+#classeur-activite .carte:nth-child(1) img
 {
-    max-height: 400px;
+    max-height: 388px;
 }
-.classeur-activite .carte:nth-child(2) img
+#classeur-activite .carte:nth-child(2) img
 {
     max-height: 180px;
 }
-.classeur-activite .carte:nth-child(3) img
+#classeur-activite .carte:nth-child(3) img
 {
     max-height: 110px;
 }
-.classeur-activite .carte:nth-child(4) img
+#classeur-activite .carte:nth-child(4) img
 {
-    max-height: 400px;
+    max-height: 388px;
 }
-.classeur-activite .carte:nth-child(5) img
+#classeur-activite .carte:nth-child(5) img
 {
     max-height: 140px;
 }
-.classeur-activite .carte:nth-child(6) img
+#classeur-activite .carte:nth-child(6) img
 {
     max-height: 152px;
 }
@@ -423,7 +446,7 @@ footer
     display: flex;
     flex-flow: row wrap;
     background-color:#F2F2F2;
-    margin: 50px 0 0 0;
+    margin: 0 0 0 0;
 }
 footer ul 
 {
