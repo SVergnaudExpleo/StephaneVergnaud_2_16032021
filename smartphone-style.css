@@ -58,6 +58,10 @@
     width: 100%;
     text-align: center;
 }
+.lien-inscri:hover
+{
+    border-top: 2px solid white;
+}
 #text-accueil
 {
     margin: 0 65px 40px 20px;

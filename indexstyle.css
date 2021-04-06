@@ -63,8 +63,10 @@ li
     color: black;
     border-top: 2px solid white;
     place-self: start center ;
-    padding: 50px 5px 0 5px;
+    padding: 50px 0 0 0;
     margin: 2px;
+    width: 100%;
+    text-align: center;
 }
 .lien-heberg:hover
 {
@@ -78,8 +80,10 @@ li
     color: black;
     border-top: 2px solid white;
     place-self: start center;
-    padding: 50px 5px 0 5px;
+    padding: 50px 0 0 0;
     margin: 2px;
+    width: 100%;
+    text-align: center;
 }
 .lien-acti:hover
 {
@@ -94,8 +98,10 @@ li
     text-decoration: none;
     border-top: 2px solid white;
     place-self: start center;
-    padding: 50px 5px 0 5px;
+    padding: 50px 0 0 0;
     margin: 2px;
+    width: 100%;
+    text-align: center;
 }
 .lien-inscri:hover
 {
@@ -191,17 +197,13 @@ input[type=text]
 {
     background-color: #DEEBFF;
 }
-.bouton-filtre i
-{
-    width: 50px;
-    text-align: center;
-}
 .logo-filtre
 {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 48px;
+    width: 50px;
     font-size:20px;
     color:#0065FC;
     background-color:#DEEBFF;
@@ -217,24 +219,19 @@ input[type=text]
     font-size: 1em;
     margin: 0 22px 0 13px;
 }
-#text-qtlogement
-{
-    display: flex;
-    flex-direction: row;
-    margin: 0 0 40px 50px;
-}
 .fa-info-circle
 {
     border-radius:50%;
     color: white;
     background-color:#0065FC;
-    font-size: 25px;
-    height: 26px;
-    width: 26px;
 }
-#text-qtlogement p
+#text-qtlogement
 {
-    margin: 0 0 0 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 0 40px 50px;
+    font-size: 12px;
 }
 
 /*visuel des cartes*/
@@ -466,12 +463,10 @@ footer
     flex-flow: row wrap;
     background-color:#F2F2F2;
     margin: 0 0 0 0;
-    padding: 0 0 0 50px;
 }
 footer ul 
 {
     list-style-type: none;
-    padding: 0 250px 0 0;
 }
 
 
