@@ -154,7 +154,7 @@
     .classeur-populaire
     {
         display: grid;
-        grid-template-columns: 33.33% 33.33% auto;
+        grid-template-columns: repeat(3,1fr);
         grid-template-rows:auto;
         grid-gap: 20px;
     }
@@ -184,7 +184,7 @@
     #classeur-activite
     {
         display: grid;
-        grid-template-columns: 33.33% 33.33% auto;
+        grid-template-columns: repeat(3,1fr);
         grid-template-rows:auto;
         grid-gap: 0 0;
         grid-template-areas: 
