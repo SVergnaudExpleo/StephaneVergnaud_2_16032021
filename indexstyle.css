@@ -6,37 +6,33 @@ body
     font-family: 'Raleway', sans-serif;
     margin: 0 0 0 0;
 }
+p
+{
+    font-size: 16px;
+}
 h1
 {
     font-weight: bold;
-    font-size: 16px;
     margin: 0 0 15px 0;
 }
 h2
 {
     font-weight: bold;
-    font-size: 16px;
     margin: 0;
 }
 h3
 {
     font-weight: bold;
-    font-size: 13px;
     margin: 8px 0 8px 0;
 }
 strong
 {
     font-weight: bold;
-    font-size: 12px;
 }
 a
 {
     text-decoration: none;
     color: unset;
-}
-li
-{
-    font-size: 12px;
 }
 /*visuel nav*/
 .header-nav
@@ -54,7 +50,6 @@ li
 .header-nav a
 {
     margin: 2px;
-    font-size: 12px;
 }
 .lien-heberg
 {   
@@ -111,7 +106,6 @@ li
 #text-accueil
 {
     margin: 0 0 20px 50px;
-    font-size: 12px;
 }
 
 /*Recherche*/
@@ -153,7 +147,6 @@ input[type=text]
 {
     border: none;
     width: 100%;
-    font-size: 14px;
     font-weight: bold;
 }
 .btn-texte
@@ -164,7 +157,6 @@ input[type=text]
     border-radius: 0 10px 10px 0;
     padding: 0;
     width: 135px;
-    font-size: 14px;
     font-weight: bold;
 }
 .btn-logo
@@ -191,7 +183,6 @@ input[type=text]
     border-top: 2px #F2F2F2 solid;
     border-bottom: 2px #F2F2F2 solid;
     border-right: 2px #F2F2F2 solid;
-    font-size: 13px;
 }
 .bouton-filtre:hover
 {
@@ -216,7 +207,6 @@ input[type=text]
 .text-filtre
 {
     font-weight: bold;
-    font-size: 1em;
     margin: 0 22px 0 13px;
 }
 .fa-info-circle
@@ -231,25 +221,31 @@ input[type=text]
     flex-direction: row;
     align-items: center;
     margin: 0 0 40px 50px;
-    font-size: 12px;
 }
-
+#text-qtlogement p
+{
+    margin: 0 0 0 10px;
+}
 /*visuel des cartes*/
 .carte
 {
-    display: flex;
-    flex-flow: row wrap;
     background-color: white;
     border-radius: 20px 20px 20px 20px;
-    /*box-shadow: 0 3px 6px rgba(90.6,90.6,90.6,91.6,0,141.2), 0 3px 6px rgba(0,0,0,0.23);*/
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    margin: 0px 0px 0px 0px;
-    align-items: flex-start;
+}
+.carte-hebergement
+{
+    padding: 5px;
+    display: flex;
+    flex-flow: row wrap;
+}
+.carte-activite
+{
+    height: 100%;
 }
 h4
 {
-    font-size: 12px;
-    margin: 0 0 13px 0;
+    margin: 0 0 5px 0;
 }
 
 /*visuel étoile*/
@@ -260,7 +256,7 @@ h4
 }
 .fa-star
 {
-font-size: 12px;
+    font-size: 12px;
 }
 .etoile-4 i:nth-child(5)
 {
@@ -300,7 +296,7 @@ font-size: 12px;
 .classeur-hebergement
 {
     display: grid;
-    grid-template-columns: repeat(3,auto);
+    grid-template-columns: repeat(3,1fr);
     grid-template-rows: 50% 50%;
     grid-gap: 30px;
     justify-content: center;
@@ -322,13 +318,11 @@ font-size: 12px;
 }
 .texte-hebergement
 {
-    width: 100%;
-    margin: 10px 5px 10px 20px;
+    padding: 10px 0 10px 15px;
 }
 .texte-hebergement p
 {
-    margin: 0 0 10px 0;
-    font-size: 10px;
+    margin: 0 0 5px 0;
 }
 .texte-populaire
 {
@@ -336,17 +330,14 @@ font-size: 12px;
     grid-template-rows:repeat(2,auto);
     width: 48%;
     height: 115px;
-    margin: 5px;
-    padding: 10px 0 10px 0;
+    padding: 10px 0 10px 15px;
 }
 .texte-populaire p
 {
     margin: 0;
-    font-size: 0.8em;
 }
 .texte-populaire .etoile
 {
-
     align-self: flex-end;
 }
 
@@ -356,14 +347,12 @@ font-size: 12px;
     height: 115px;
     width: 100%;
     object-fit: cover;
-    margin: 5px;
 }
 .img-populaire
 {
     border-radius: 20px 0 0 20px;
     width: 45%;
     height: 135px;
-    margin: 5px;
     object-fit: cover;
 }
 
@@ -376,7 +365,7 @@ font-size: 12px;
 {
     height: 438px;
     display: grid;
-    grid-template-columns: repeat(4,auto);
+    grid-template-columns: repeat(4,1fr);
     grid-template-rows:235px auto;
     grid-gap: 0 45px;
     grid-template-areas: 
@@ -394,7 +383,6 @@ font-size: 12px;
     height: 50px;
     padding: 0 0 0 20px;
     margin: 0;
-    width: 100%;
 }
 #classeur-activite .carte:nth-child(1)
 {
@@ -462,11 +450,13 @@ footer
     display: flex;
     flex-flow: row wrap;
     background-color:#F2F2F2;
-    margin: 0 0 0 0;
+    padding: 0 0 50px 0;
 }
 footer ul 
 {
     list-style-type: none;
 }
-
-
+footer li
+{
+    padding: 20px 0 0 0;
+}
