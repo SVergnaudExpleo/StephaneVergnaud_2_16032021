@@ -186,15 +186,8 @@
     {
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: repeat(auto,auto);
+        grid-template-rows: repeat(6,auto);
         margin: 0 0 35px 0;
-        grid-gap: 25px;
-    }
-    .classeur-activite
-    {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: repeat(auto,auto);
         grid-gap: 25px;
     }
 
