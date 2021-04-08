@@ -1,8 +1,7 @@
 /*page de traitement du rendu smartphone et petite tablette*/
 
 @media only screen 
-  and (max-width: 820px)
-  and (-webkit-device-pixel-ratio: 2) {
+  and (max-device-width: 820px) {
 
     /*visuel nav*/
     .header-nav

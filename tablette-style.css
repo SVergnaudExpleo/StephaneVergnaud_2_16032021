@@ -1,8 +1,8 @@
 /*page de traitement du rendu sur tablette*/
 
 @media only screen 
-  and (min-width: 821px) 
-  and (max-width: 1200px) {
+  and (min-device-width: 821px) 
+  and (max-device-width: 1200px) {
 
     /*visuel nav*/
     .header-nav
