@@ -1,7 +1,7 @@
 /*page de traitement du rendu sur tablette*/
 
 @media only screen 
-  and (min-width: 481px) 
+  and (min-width: 721px) 
   and (max-width: 1200px) {
 
     /*visuel nav*/

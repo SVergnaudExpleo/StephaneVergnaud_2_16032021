@@ -1,7 +1,7 @@
 /*page de traitement du rendu smartphone et petite tablette*/
 
 @media only screen 
-  and (max-width: 480px) {
+  and (max-width: 720px) {
 
     /*visuel nav*/
     .header-nav
