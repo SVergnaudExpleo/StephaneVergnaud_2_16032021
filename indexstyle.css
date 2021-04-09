@@ -221,7 +221,7 @@ input[type=text]
 #text-qtlogement
 {
     display: grid;
-    grid-template-columns: repeat(2,auto);
+    grid-template-columns: 28px 1fr;
     grid-template-rows: auto;
     align-items: center;
     margin: 0 0 40px 50px;
