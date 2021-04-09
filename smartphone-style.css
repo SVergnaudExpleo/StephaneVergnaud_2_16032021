@@ -240,7 +240,10 @@
     {
         height: 133px;
     }
-
+    #classeur-activite .carte:nth-child(3) img
+    {
+        max-height: 133px;
+    }
     /*visuel pied page*/
     footer
     {
