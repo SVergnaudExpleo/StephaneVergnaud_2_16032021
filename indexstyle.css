@@ -451,14 +451,17 @@ h4
 /*visuel pied page*/
 footer
 {
-    display: flex;
-    flex-flow: row wrap;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    justify-content: flex-start;
+    grid-gap: 230px;
     background-color:#F2F2F2;
-    padding: 0 0 50px 0;
+    padding: 50px 0 50px 50px;
 }
 footer ul 
 {
     list-style-type: none;
+    padding: 0;
 }
 footer li
 {

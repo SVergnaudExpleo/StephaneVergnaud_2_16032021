@@ -247,6 +247,7 @@
     /*visuel pied page*/
     footer
     {
+        grid-gap: unset;
         display: flex;
         flex-direction: column;
         background-color:#F2F2F2;
